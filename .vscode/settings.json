@@ -1,0 +1,12 @@
+{ 
+"explorer.confirmDragAndDrop": false,
+"explorer.confirmDelete": false,
+"liveServer.settings.donotVerifyTags":true,
+"liveServer.settings.donotShowInfoMsg":true,
+"liveServer.settings.NoBrowser":true,
+"liveServer.settings.CustomBrowser":"chrome",
+"liveServer.settings.host":"127.0.0.1",
+"liveServer.settings.port":5500,
+"files.autoSave": "afterDelay",
+"liveServer.settings.multiRootWorkspaceName": "CodingDream"
+}

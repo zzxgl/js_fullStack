@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css电影-大白</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background: radial-gradient(circle at center, #ffff, #fff 50%, #aaa);
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+            /* radial-gradient渐变色  *circle at center, #ffff, #fff 50%, #aaa 环形渐变色/
+        
+            /* background-color: red; */ 
+
+        }
+        .baymax{
+            border-bottom: 1.5em solid #000000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            transform: translate(-50%,-40%);
+        }
+        .baymax::before, .baymax:after{
+            content: "";
+            position: absolute;
+            background: #000000;
+            border-radius: 50%;
+           
+            top:-6em;
+            width: 12em;
+            height: 12em;
+            background: linear-gradient(to bottom, #efefef,
+            #efefef 50%, #000 50%,#000);
+            /* inear-grdient线性渐变 */
+            background-position: 0 -100%;
+            background-size: 200% 200%;
+            animation: blink 6s infinite;
+        }
+
+        .baymax::before{
+            left: -9em;
+            transform:skewX(4deg);
+            
+            /* /
+            background-position: 0 -100%;
+            background-size: 背景的大小 */ 
+        }
+        .baymax:after{
+            right: -9em;
+            transform:skewX(-4deg);
+            animation:blink 6s .1s infinite;
+            /* animation 属性是一个简写属性，用于设置六个动画属性 */
+            
+            
+        } 
+        @keyframes blink {
+                0%,50%{
+                    background-position: 0 100%;
+                }
+                85% ,95% {
+                    background-position: 0 75%;
+                }
+                100% {
+                    background-position: 0 100%;
+                }
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="baymax"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Some musical instruments</h1>
+          <ul>
+            <li id="clarinet" class="wind woodwind">
+              The <a href="https://en.wikipedia.org/wiki/Clarinet">clarinet</a>
+            </li>
+            <li id="saxophone" class="wind woodwind">
+              The <a href="https://en.wikipedia.org/wiki/Saxophone">saxophone</a>
+            </li>
+            <li id="trumpet" class="wind brass">
+              The <a href="https://en.wikipedia.org/wiki/Trumpet">trumpet</a>
+            </li>
+            <li id="violin" class="chordophone">
+              The <a href="https://en.wikipedia.org/wiki/Violin">violin</a>
+            </li>
+            <li id="harpsichord">
+              The <a href="https://en.wikipedia.org/wiki/Harpsichord">harpsichord</a>
+            </li>
+          </ul>
+          <script>
+          // function linkInfo(){
+          //     //打印A标签   第一个标签的href   最后一个标签的href
+          //     const titlt=document.getElementsByTagName("a");
+          //     console.log(titlt.length);
+          //     if(!titlt.length) return;
+          //     console.log(titlt[0].href);
+          //     console.log(titlt[titlt.length-1].href);   
+          // }
+          // linkInfo();
+          // //contains  是否包含
+          // console.log(document.getElementById("saxophone").classList.contains("wind"));
+
+          const hasClass = (id,someClass) =>{
+            //  const title=document.getElementById(id);
+            var trObj = document.getElementById(id);;    //给所有的tr绑定事件,通过id取出的是一个对象数组
+          // for (var i = 0; i < trObj.length; i++) {
+            if (trObj==null){
+              console.log("error")
+              return false;
+            }
+            const Arr= Array.from (trObj.classList);
+           if ( Arr(someClass)==-1) {
+              
+              return false;
+            }
+        
+          }
+            
+        // }   
+          console.log(hasClass("saxophone","woodwind"));
+          console.log(hasClass("saxophone","brass"));
+          console.log(hasClass("trumpet","brass"));q
+          console.log(hasClass("constrabass","chorphone"));
+          //判断某id的元素  具有某类名  true|false  找不到元素，但找类名，提示错误
+          //hasClass
+          //saxophone woodwind true
+          //saxophone brass false
+          //trumpet brass true
+          //constrabass chorphone error
+          </script>
+</body>
+</html>

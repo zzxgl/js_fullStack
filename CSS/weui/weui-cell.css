@@ -1,0 +1,50 @@
+.weui-cells{
+    font-size: 17px;
+    line-height: 1.47058824;
+    /* 行高是字体的倍数 */
+    background-color: #ffffff;
+    overflow: hidden;
+    /*子元素超出父元素 超出则隐藏 */
+    position: relative;
+    margin-top: 1.17647059em;
+    }
+    /* 如何做盒子的上下边框，用伪元素，他不会改表盒子的大小 */
+    .weui-cells::before{
+        /* 不影响父元素的盒子模型 */
+        content: "";
+        /* 定位元素会让元素离开文档流 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 1px;
+        border-top: 1px solid #e5e5e5;
+        /* background-color: red; */
+        transform: scaleY(.5);
+        /* transform变形 scaleY 沿着y轴从下往上压 */
+        transform-origin: 0 0;
+    }
+    .weui-cells::after {
+        content:"";
+        position: absolute;
+        left: 0;
+        
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px solid #e5e5e5;
+        transform: scaleY(.5);
+        transform-origin: 0 100%;
+    }
+    .weui-cell{
+        padding: 10px 15px;
+        position: relative;
+        display:flex;
+        align-items: center;
+        /* align-items: center;是元素居中 */
+        /* display:flex;弹性布局  */
+    }
+.weui-cell__bd{
+    flex: 1;
+    /* 只分配一个元素 */
+}
