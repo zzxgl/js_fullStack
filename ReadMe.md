@@ -17,3 +17,4 @@
     每天提交代码
     repo AJie_lesson 学习项目
     git pages 提供了一个静态的网站托管服务
+js之中除了基本数据类型就是对象
