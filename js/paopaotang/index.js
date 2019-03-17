@@ -22,6 +22,6 @@ player1.enemy=player2; //
 player2.enemy=player1;
 //console.log(player1.name);
  
-player1.win(); //win()函数,作为对象的方法被调用    this会指向对象本身
+player1.win();//win()函数,作为对象的方法被调用    this会指向对象本身
 player2.lose(); 
 

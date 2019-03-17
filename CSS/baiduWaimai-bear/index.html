@@ -30,18 +30,16 @@
   const next=document.getElementById('next');
   next.addEventListener('click',()=>{
       const preload =document.querySelector('.view.preload');
-      preload.style.transform='translate3d(-.8rem,'+ -100  +'%, 0)';
+      preload.style.transform='translate3d(-.8rem,'+-100+'%, 0)';  //%单位,Y轴移动的单位
   })
   let width = -10;
   let interval = setInterval(() => {
     width += 10 ;
     console.log(width);
-    process.style.width = width + '%';
-    if (width >= 100) clearInterval(interval);
-  }, 100); // 每隔 100ms 做一次 一直
-
-  setTimeout(() => {}, 100);//  100ms 之后 做一次 一次
-  
+    process.style.width = width + '%';           // 随变量改变
+    if (width >= 100) clearInterval(interval);  //  清除定时器
+  },100);                                      //   每隔 100ms 做一次 一直
+ // setTimeout(() => {}, 10);                   //    100ms 之后 做一次 一次即  width+10
   </script>
 </body>
 </html>

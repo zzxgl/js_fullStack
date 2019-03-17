@@ -78,7 +78,7 @@
       <div class="weui-dialog">
           <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
           <div class="weui-dialog__ft">
-              <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+              <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="goKnow">知道了</a>
           </div>
       </div>
   </div>
@@ -114,6 +114,12 @@
            dialog.style.display='block';
            dialog.style.opacity=1;//透明度 1 不透明  0透明
     }
+    //window.onload=function(){
+    var oKnow=document.getElementById('goKnow');
+    oKnow.onclick=function(){ 
+        document.getElementById('iosDialog2').style.display='none';
+    }
+    //}
   </script>
 </body>
 </html>
