@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+ul li{
+    list-style: none;
+}
+.page{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box; 
+}
+.page-header{
+    width: 100%;
+}
+.page-header__pic{
+    width: 100%;
+    height: 200px;
+    background-image: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1098247071,2931357513&fm=26&gp=0.jpg');
+    background-size: contain;
+    /* 等比例压缩于盒子的大小相适应 cover 拉伸图片的大小于盒子相适应*/
+}
+.page-header__userinfo{
+    padding: 10px 10px 13px 10px;
+    position: relative;
+}
+.name{
+    line-height: 1;
+}
+.labels{
+    margin-top: 10px;
+   
+}
+.label{
+    padding: 5px 10px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+}   
+    
+.blue{
+    background-color: #48A6Fd;
+}
+.green{
+    background-color: #1DCA42;
+}
+.orange{
+    background-color: #fb8800;
+}
+.page-header__msg{
+    margin-top: 10px;
+}
+.item{
+    width: 110px;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+}
+.city::before{
+    content:'';
+    width: 20px;
+    height: 21px;
+    background: url('./icon/icon2.png');
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.job::before{
+    content:'';
+    width: 22px;
+    height: 20px;
+    background: url('./icon/zhiye.png');
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.like::before{
+    content:'';
+    width: 30px;
+    height: 23px;
+    background: url('./icon/aihao.png');
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom:1px;
+}
+.wechat::before{
+    content:'';
+    width: 25px;
+    height: 22px;
+    background: url('./icon/weixin.png');
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.phone::before{
+    content:'';
+    width: 25px;
+    height: 22px;
+    background: url('./icon/dianhua.png');
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ewm{
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    top: 32px;
+    right: 11px;
+}
+.ewm img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.envolope{
+    width: 55px;
+    height: 60px;
+    right: 4px;
+    bottom: 0;
+    position: absolute;
+}
+.envolope img{
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+}
