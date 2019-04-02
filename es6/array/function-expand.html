@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(nick = '未知昵称'){
+            // if (!nick){
+            //     nick='未知昵称';
+            // }
+            // this.nick =nick ||'未知昵称';
+            this.nick =nick;
+        }
+        const p1 = new Person('nick');
+        //p1 
+        const p2 =new Person();
+        //获取多余的参数 变量名是数组 把多余的变量放入数组中
+        function sum(a,...args){
+            // Array.from(arguments);
+            console.log(args);
+        }
+        sum(2,4,6,8);
+    </script>
+</body>
+</html>

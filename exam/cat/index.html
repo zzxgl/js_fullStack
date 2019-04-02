@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+            background-color: cornsilk;
+        }
+
+        .container {
+            height: 100%;
+            position: relative;
+        }
+
+        .cat {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            width: 129px;
+            height: 202px;
+            background: url(./maoshenti.png) no-repeat;
+        }
+
+        .weiba {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .cat-wb {
+            position: absolute;
+            width: 68px;
+            height: 195px;
+            left: 0;
+            top: -178px;
+            background: url(./maowei.png) no-repeat;
+            transform-origin: bottom center;
+            animation: ani_wb 5s ease-in-out infinite;
+        }
+
+        @keyframes ani_wb {
+            0% {
+                transform: rotateZ(0);
+            }
+
+            50% {
+                transform: rotateZ(15deg);
+            }
+
+            100% {
+                transform: rotateZ(0);
+            }
+        }
+
+        .eye1 {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            left: 94px;
+            top: 180px;
+            background: url(./maoyan1.png) no-repeat;
+            background:cover;
+            animation: ani_eyes 4s ease-in-out infinite;
+        }
+
+        .eye2 {
+            position: absolute;
+            left: 80px;
+            top: 173px;
+            width: 4px;
+            height: 4px;
+            background: url(./maoyan2.png) no-repeat;
+            background:cover;
+            animation: ani_eyes 4s ease-in-out infinite;
+        }
+
+         @keyframes ani_eyes {
+            0% {
+                width: 4px;
+                height: 4px;
+            }
+            25% {
+                width: 3px;
+                height: 1px;
+            }
+            30%{
+                width: 4px;
+                height: 4px;
+            }
+            45%{
+                width: 3px;
+                height: 1px;
+            }
+            100% {
+                width: 4px;
+                height: 4px;
+            }
+        } 
+
+        .mouse {
+            position: absolute;
+            left: 84px;
+            top: 186px;
+            width: 30px;
+            height: 30px;
+            z-index: 1;
+            background: url(./maozui.png) no-repeat;
+        }
+
+        .jiojio {
+            position: absolute;
+            left: 69px;
+            top: 182px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url(./maozhua.png) no-repeat;
+            transform-origin: left top;
+            animation: ani_jiojio 5s ease-in-out infinite;
+
+        }
+
+        @keyframes ani_jiojio {
+            0% {
+                transform: rotateZ(0);
+            }
+
+            50% {
+                transform: rotateZ(10deg);
+            }
+
+            100% {
+                transform: rotateZ(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="cat">
+                <div class="weiba">
+                    <div class="cat-wb"></div>
+                    <div class="eye1"></div>
+                    <div class="eye2"></div>
+                    <div class="mouse"></div>
+                    <div class="jiojio"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
