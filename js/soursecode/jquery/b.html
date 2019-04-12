@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>司徒正美</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        // 浏览器的渲染机制
+        // DOM Ready 事件
+        function jQueryEle(ele) {
+            this.ele = ele;
+        }
+        jQueryEle.prototype.html = function (str) {
+            this.ele.innerHTML=str;
+        }
+        const jQuery = {};//命名空间 一个框架的来源  JSON Object
+        jQuery.wrapper = function(){
+            // ele querySelector innerHTML　没有html
+            // 将ele对象封装于此
+            const jQueryEle = new jQueryEle(ele);
+            // jQuery里的结点对象,不是简单的html结点而是一个jQuery对象
+        }
+        function $(selector) {
+            if (typeof selector === 'string') {
+                //?html()
+                // $('#root').html('')
+                // $() 函数 运行结果 类型 prototype方法
+                // ele上有html()
+                const ele = document.querySelector(selector);
+                if (ele) {
+
+                    return jQuery.wrapper(ele);
+                    // 把ele这个结点作为对象的实例化传递
+                }
+
+            } else if (typeof selector === 'function') {
+                document.addEventListener('DOMContentLoaded', selector, false);
+            }
+        }
+        $(function () {
+            console.log('DOM Ready');
+            $('#root').html('<p>我要去云南,我要去越南!</p>');
+        })
+    </script>
+</body>
+
+</html>

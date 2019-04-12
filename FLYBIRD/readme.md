@@ -1,0 +1,1 @@
+被隐藏的页面上面有setInterval() 需要清除clearInterval

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery源码解析</title>
+</head>
+
+<body>
+    <img src="https://pic.36krcnd.com/201904/09061934/9axl9yt10w5w6kq6!heading" alt="" onLoad="photoLoaded()" />
+    <!-- 时间监听 -->
+    <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            console.log('window load');
+        }
+        // document.addEventListener('DOMContentLoaded',function(){
+        //     console.log('DOM ready!');
+        //     //DOM Ready     
+        // })
+        $(function(){
+            // 开始js 的表演
+            console.log("DOMREADY");
+        })
+        // $是函数,function(){}是参数
+        function photoLoaded() {
+            console.log('图片loaded');
+            // 异步
+        }
+    </script>
+</body>
+
+</html>
