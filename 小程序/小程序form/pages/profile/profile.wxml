@@ -1,0 +1,51 @@
+<view class="page-body">
+    <form bindsubmit="onSubmit">
+        <view class="section">
+            <view class="section_title">Name</view>
+            <input name="name" placeholder="Please Enter You Namr!" focus="{{true}}" />
+        </view>
+        <view class="section">
+            <view class="section_title">Single:{{notSingle ? '否' : '是'}}</view>
+            <switch name="switch" bindchange="onSingleChange"/>
+        </view>
+        <view class="section">
+            <view class="section_title">Gender</view>
+            <radio-group name="sex">
+                <label>
+                    <radio value="male" />
+                    Male
+                </label>
+                <label>
+                    <radio value="female" />
+                    Female
+                </label>
+            </radio-group>
+        </view>
+        <view class="section">
+            <view class="section_title">Hobby</view>
+            <checkbox-group name="hobby">
+                <label>
+                    <checkbox value="basketball" />
+                    Basketball
+                </label>
+                <label>
+                    <checkbox value="swim" />
+                    Swim
+                </label>
+                <label>
+                    <checkbox value="sing" />
+                    Sing
+                </label>
+            </checkbox-group>
+        </view>
+        <view class="section">
+            <button type="primary" form-type="submit">提交</button>
+        </view>
+    </form>
+    <view wx:for="{{profileLists}}" class="profileLists">
+        {{item.name}}
+      {{item.switch}}
+      {{item.sex}}
+      {{item.hobby}}
+    </view>
+</view>

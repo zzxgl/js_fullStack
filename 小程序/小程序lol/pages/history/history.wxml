@@ -1,0 +1,9 @@
+<view class="container history-list"> 
+    <block wx:for="{{history}}">
+        <view class="image-section">
+            <image style='width:80px;height:80px;background-color:#eeeeee'mode='aspectFit'src="{{item.src}}" />
+        </view>
+        <text>{{item.id}} </text>
+        <text>{{item.date}}</text>
+    </block>
+</view>

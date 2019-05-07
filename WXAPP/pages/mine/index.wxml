@@ -1,0 +1,14 @@
+<!--pages/mine/index.wxml-->
+<!-- <view>
+    <ul wx:for={{people}}>
+        <li>
+            {{item}}
+        </li>
+        <li>
+            {{item}}
+        </li>
+        <li>
+            {{item}}
+        </li>
+    </ul>
+</view> -->

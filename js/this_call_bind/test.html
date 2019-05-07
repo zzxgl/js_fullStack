@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        // window.myname ='wemi';
+        // var obj = {
+        //     myname : 'sven',
+        //     getName :function(){
+        //         return this.myname;
+        //     }
+        // }
+        // console.log(obj.getName());
+        // var getName2 = obj.getName;
+        // console .log(getName2);  输出wemi
+        // //不带()就是不运行 函数体赋值 生成期
+        // //this 丢失 普通函数
+        // //运行方式
+        // var getId = function(id){
+        //     return  document.getElementById(id);
+        // }
+        // console.log(getId('div1'));
+        // var getId = document.getElementById;
+        // // document对象()内部 this 上面的方法 getElemmentById
+        // console.log(getId('div1'));
+        // document.getElementById = 
+
+
+        //闭包最佳手段函数里面嵌套函数 闭包可以让函数运行时找到它定义时的变量
+        document.getElementById = (function(func){
+           return function(){
+            return func.apply(document,arguments)
+           }
+        })(document.getElementById);
+        var getId = document.getElementById;
+        //普通函数执行 this 指向的是window(this 丢失)
+        console.log(getId('div1'));
+    </script>
+</body>
+</html>
