@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.12-pre/lodash.min.js"></script>
+    <script>
+        var user = {
+            info: {
+                // avatar: [
+                //     'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1675011317,3363666548&fm=27&gp=0.jpg',
+                //     'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4055757935,3900949105&fm=27&gp=0.jpg'
+                // ]
+            }
+        }
+        const img = (user.info && user.info && user.info.avatar && user.info.avatar[1] || 'default image');
+        const img1 = _.get(user, ['info', 'avatar', 1],'default image');
+        console.log(img);
+        console.log(img1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+- swiper swiper-item
+- indicator-dots="{{true}}" 轮播图当前页面
+- require 引入 假数据
+-  mode="aspectFill" 盒子填充满 cover效果一样的
+- app.wxss 复用
