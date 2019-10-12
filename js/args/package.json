@@ -1,0 +1,12 @@
+{
+  "name": "args",
+  "version": "1.0.0",
+  "description": "函数参数 \r function abc(a, b, c){",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

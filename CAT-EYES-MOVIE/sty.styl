@@ -1,0 +1,42 @@
+// 定义变量
+$hdbg_color = #e54847 
+$font_color_whtie = #ffffff
+*
+ margin 0
+ padding 0
+ul 
+  li
+    list-style none
+
+html, body
+  width 100%
+
+.nav
+  height 1.067rem
+  font-size 18px
+  text-align center
+  line-height 1.067rem
+  background-color $hdbg_color
+  .arrow-left
+    float left 
+    height 100%
+    position relative
+    // &继承当前父容器的类名
+    &::after
+      content ''
+      width 12px
+      height 12px
+      border 2px solid #ffffff
+      position absolute
+      top 50%
+      left 16px
+      transform rotate(45deg) translateY(-50%)
+      border-width 0 0 2px 2px //上右下左
+  span 
+    color $font_color_whtie
+    
+    
+    
+
+
+  

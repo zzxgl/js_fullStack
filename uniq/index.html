@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重</title>
+</head>
+
+<body>
+    <!-- 数组去重 -->
+    <!-- [1,2,3,2,3,5] -->
+    <!-- [1,2,3,5] -->
+    <script>
+//Set  ...解构
+        // function uniq(arr) { 
+        //     return [...new Set(arr)] // 克隆 Set API过滤 
+        // }
+
+
+//indexOf
+        // function uniq(arr) {
+        //     let result = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (result.indexOf(arr[i]) === -1) {  //indexof根据数组中的元素查找该元素在数组中的下标值 数组中不存在则为-1
+        //             result.push(arr[i])
+        //         }
+        //     }
+        //     return result;
+        // }
+
+
+//includes
+        // function uniq(arr) {
+        //     let result = [];
+        //     for (let i = 0; i<arr.length; i++) {
+        //         if(!result.includes(arr[i])) {
+        //             result.push(arr[i]);
+        //         }
+        //     }
+        //     return result;
+        // }
+
+
+//reduce
+        function uniq(arr) {
+            return arr.reduce((prev, cur) => prev.includes(cur) ? prev : [...prev, cur], [])
+        }
+        console.log(uniq([1, 2, 3, 4, 2, 3]))
+    </script>
+</body>
+</html>
